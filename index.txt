@@ -1,0 +1,76 @@
+1 - o cliente faz uma requisição atraves de um link que está associado a um ip que vai acessar um servidor. 
+
+2 - o servidor recebe a requisição e verifica se o ip está autorizado a acessar o servidor, se estiver ele envia o arquivo solicitado.
+
+o navegador recebe o arquivo e o exibe na tela.(cliente)
+o servidor é o intermediário entre o cliente e o arquivo solicitado.
+
+cliente pode ser : 
+
+navegador, aplicativo, script, etc. está fazendo a requisição e recebendo o arquivo solicitado.
+
+servidor é que serve . Pode ser um servidor web, servidor de aplicação, servidor de banco de dados, etc.
+
+api é uma interface de comunicação entre o cliente e o servidor. é um sistema que nao tem interface gráfica, mas que recebe requisições e responde com dados.
+
+ele retorna dados em formato json, xml, etc.
+
+quando uma empresa libera uma api para o publico, ela libera uma interface de comunicação para que outras empresas possam acessar seus dados e fazer algo com eles.
+
+Estrutura de uma api : 
+
+1° - requisição (cliente)
+
+funciona como um acesso a um site normal.
+GET, POST, PUT, DELETE, OPTIONS.(OBJETIVO DA REQUISIÇÃO)
+Pode ser enviado cabeçalhos, parametros, etc.
+
+
+2° - resposta (servidor)
+
+pode ser em formato json, xml, etc.
+
+endpoint é o caminho que o cliente vai acessar para fazer a requisição.
+
+//////////////////////////////////////////////////////////////////
+
+planejamento da api devsNotes(sistema de anotações)	
+
+1° - O que o projeto precisa fazer : 
+
+- listar anotações
+- listar 1 anotação
+- adicionar anotações
+- editar anotações
+- deletar anotações
+
+2° - Qual a Estrutura de dados que o projeto vai usar :
+
+- local para armazenar as anotações
+-- id
+--title
+--body
+
+
+esta é a maneira de se fazer uma api com OO.
+
+3° - Quais os endpoints que o projeto vai ter :
+(method) - (endpoint - url / params)
+(1) - GET /api-php/notes - listar todas as anotações
+(2) - GET /api-php/note/:id - listar 1 anotação
+(3) - POST /api-php/note (title, body) - adicionar anotação
+(4) - PUT /api-php/note/:id (title, body) - editar anotação
+(5) - DELETE /api-php/note/:id - deletar anotação
+
+esta é a maneira de se fazer uma api com procedural.
+
+3° - Quais os endpoints que o projeto vai ter :
+(method) - (endpoint - url / params)
+(1) - GET /api-php/getAll.php - listar todas as anotações
+(2) - GET /api-php/get.php?id=1 - listar 1 anotação
+(3) - POST /api-php/insert.php(title, body) - adicionar anotação
+(4) - PUT /api-php/upadte.php (id,title, body) - editar anotação
+(5) - DELETE /api-php/delete.php (id) - deletar anotação
+
+
+1° - começar a criar o banco de dados. 
