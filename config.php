@@ -13,7 +13,7 @@ $pass = '';
 try {
     $pdo = new PDO("mysql:dbname=".$name.";host=".$host, $user, $pass);
 } catch (PDOException $e) {
-    echo "Error: ".$e->getMessage();
+    echo "Error: Contate o administrador do sistema";
     exit;
 }
 
